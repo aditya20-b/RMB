@@ -90,7 +90,13 @@ AppKit::~AppKit()
     }
     NSRunningApplication *app = [NSRunningApplication runningApplicationWithProcessIdentifier:pid];
 
-    return app && [app activateWithOptions:NSApplicationActivateAllWindows | NSApplicationActivateIgnoringOtherApps];
+    return app && (
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 140000
+    [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivationOptions(0)]
+#else
+    [[NSApplication sharedApplication] activateWithOptions:NSApplicationActivateIgnoringOtherApps]
+#endif
+    );
 }
 
 //

@@ -8,7 +8,7 @@ Config::Config() {
     constexpr uint32_t NONE = 0x0;
 
     TOGGLE_MODIFIER = GLFW_KEY_LEFT_CONTROL;
-    TOGGLE_KEY = GLFW_KEY_F9;
+    TOGGLE_KEY = GLFW_KEY_1;
 
     /* default ryujinx right stick keys j = left, l = right, i = up, k = down */
     RIGHT_STICK_KEYS[0] = GLFW_KEY_J;

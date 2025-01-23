@@ -15,7 +15,7 @@ public:
     const uint32_t WIDTH = 420;
     const uint32_t HEIGHT = 520;
 
-    std::string TARGET_NAME = "Ryujinx";
+    std::string TARGET_NAME = "Ryujinx 1.2.80";
 
     uint32_t TOGGLE_MODIFIER;
     uint32_t TOGGLE_KEY;
